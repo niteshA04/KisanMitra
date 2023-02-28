@@ -9,3 +9,5 @@ Project made by:<br>
 4. Kautilya Singh<br>
 
 Made under guidence: Prof. Ranadeep Kaur
+
+Contact: <href link="www.linkedin.com/in/nitesh-addagatla">Nitesh Addagatla</href>
