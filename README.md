@@ -1,5 +1,5 @@
 # Kisan Mitra
-Research paper link: "link here"<br><br>
+Research paper link: Click <a href="https://www.irjmets.com/paperdetail.php?paperId=feaf4911324b670ac35a490986706c38&title=KISAN+MITRA-Initiative+for+farmers&authpr=Samruddha+Somani">here</a> to go to the research paper <br><br>
 A propject initiative to help farmers<br>
 
 Project made by:<br>
