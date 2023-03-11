@@ -234,23 +234,32 @@ def disease_prediction():
     title = 'KisanMitra - Disease Detection'
 
     if request.method == 'POST':
-        if 'file' not in request.files:
+        if 'file' not in request.files: 
             return redirect(request.url)
         file = request.files.get('file')
-        if not file:
+        if not file: 
             return render_template('disease.html', title=title)
-        try:
+        try: 
             img = file.read()
 
+            if file.filename.split('.')[-1].lower() == 'png': 
+                file_image = Image.frombytes('RGBA', (128,128), img, 'raw')
+                file_image = file_image.convert('RGB')
+
+                img = io.BytesIO()
+                file_image.save(img, format='jpeg')
+                img = img.getvalue()
+            
             prediction = predict_image(img)
 
             prediction = Markup(str(disease_dic[prediction]))
             return render_template('disease-result.html', prediction=prediction, title=title)
-        except:
+        except Exception as e:
+            print(e)
             pass
     return render_template('disease.html', title=title)
 
 
 # ===============================================================================================
 if __name__ == '__main__':
-    app.run(debug=False)
+    app.run(debug=True)
