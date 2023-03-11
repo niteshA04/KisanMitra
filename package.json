@@ -1,11 +1,10 @@
 {
-  "name": "KisanMitra",
+  "name": "kisan-mitra",
   "version": "1.0.0",
   "description": "",
+  "main": "app.py",
   "scripts": {
-      "build": "echo \"No build specified\" && exit 1",
-      "test": "echo \"No test specified\" && exit 1",
-      "start": "node index.js"
+    "start": "cities.js"
   },
   "repository": {
       "type": "git",
@@ -16,5 +15,8 @@
   "bugs": {
       "url": "https://github.com/niteshA04/KisanMitra/issues"
   },
-  "homepage": "https://github.com/niteshA04/KisanMitra#readme"
+  "homepage": "https://github.com/niteshA04/KisanMitra#readme",
+  "dependencies": {
+    "express": "^4.17.1"
+  }
 }
