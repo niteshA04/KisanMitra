@@ -3,7 +3,7 @@
 
 <head>
 	<title>{{ title }}</title>
-	<link rel="shortcut icon" href="{{ url_for('static', filename='images/favicon.ico') }}"/>
+	<link rel="shortcut icon" href="{{ url_for('static', filename='images/favicon.ico') }}" />
 
 	<!-- for-mobile-apps -->
 	<meta name="viewport" content="width=device-width, initial-scale=1">
@@ -131,7 +131,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 	<!-- custom css -->
 	<link href="{{ url_for('static', filename='css/font-awesome.min.css') }}" rel="stylesheet"><!-- fontawesome css -->
 	<!-- //css files -->
-	<!-- <link rel="icon" type="image/png" href="{{ url_for('static', filename='images/favicon.png?') }}"> -->
+	<link rel="icon" type="image/png" href="{{ url_for('static', filename='images/favicon.png?') }}">
 
 
 	<script type="text/JavaScript" src="{{ url_for('static', filename='scripts/cities.js') }}"></script>
@@ -150,12 +150,62 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 
 		}
 	</style>
+	
+	<!--Translator-->
+	<style type="text/css">
+		/*google translate Dropdown */
+		#google_translate_element select {
+			background: #f6edfd;
+			color: #383ffa;
+			border: none;
+			border-radius: 3px;
+			padding: 6px 8px
+		}
+
+		/*google translate link | logo */
+		.goog-logo-link,
+		.goog-te-gadget span,
+		div#goog-gt- {
+			display: none !important;
+		}
+
+		.goog-te-gadget {
+			color: transparent !important;
+			font-size: 0;
+		}
+
+		/* google translate banner-frame */
+
+		.goog-te-banner-frame {
+			display: none !important;
+		}
+
+		#goog-gt-tt,
+		.goog-te-balloon-frame {
+			display: none !important;
+		}
+
+		.goog-text-highlight {
+			background: none !important;
+			box-shadow: none !important;
+		}
+	</style>
+	<script>
+		function googleTranslateElementInit() {
+			new google.translate.TranslateElement({
+				pageLanguage: 'en',
+				autoDisplay: 'true',
+				layout: google.translate.TranslateElement.InlineLayout.HORIZONTAL
+			}, 'google_translate_element');
+		}
+	</script>
+	<script src='//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit'></script>
 </head>
 
 <body>
-
 	<!-- Navigation -->
 	<nav class="navbar navbar-expand-lg navbar-dark bg-dark static-top" style="background-color: #1C00ff00;">
+		<div id="google_translate_element"></div>
 		<div class="container">
 			<a class="navbar-brand" href="{{ url_for('home') }}">
 				<img src="{{ url_for('static', filename='images/logo.jpg') }}" style="width: 90px; height: 55px" alt="">
@@ -221,7 +271,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 				4. Kautilya Singh <br>
 			</p>
 			<p>Under the guidance of: <b>Prof. Randeep Kaur Kahlon</b></p>
-			
+
 		</div>
 	</footer>
 	<!-- //footer -->
